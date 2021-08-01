@@ -1,15 +1,15 @@
 canvas=document.getElementById("mycanvas");
 ctx=canvas.getContext("2d");
-car1height=120;
-car1width=70;
+car1height=100;
+car1width=140;
 car1x=10;
 car1y=10;
 car1image="car1.jpg";
 backgroundimage="racing track.jpg";
 
 
-car2height=120;
-car2width=70;
+car2height=100;
+car2width=140;
 car2x=10;
 car2y=100;
 car2image="car2.jpg";
@@ -58,42 +58,6 @@ if(keypress=='39'){
     car1right();
     console.log("right arrow key presed");
 }
-
-function up(){
-    if(car1y>=0){
-   car1y=car1y-10;
-   console.log("when up arrow is pressed x = "+car1x+" y= "+car1y);
-   uploadBackground();
-   uploadCar1();
-    }
-}
-function down(){
-    if(car1y<=500){
-        car1y=car1y+10;
-      console.log("when down aarow is presed x= "+car1x+" y= "+car1y);
-      uploadBackground();
-      uploadCar1();
-    }
-}
-function left(){
-    if(car1x>=0){
-        car1x=car1x-10;
-        console.log("when left aarow is presed x= "+car1x+" y= "+car1y);
-      uploadBackground();
-      uploadCar1()
-    }
-}
-function right(){
-    if(car1x<=700){
-        car1x=car1x+10;
-        console.log("when righi aarow is presed x= "+car1x+" y= "+car1y);
-      uploadBackground();
-      uploadCar1();
-    }
-}
-
-
-
 if(keypress=='87'){
     car2up();
     console.log("w key pressed");
@@ -111,5 +75,80 @@ if(keypress=='68'){
     console.log("d key pressed");
 }
 }
+function car1up(){
+    if(car1y>=0){
+   car1y=car1y-10;
+   console.log("when up arrow is pressed x = "+car1x+" y= "+car1y);
+   uploadBackground();
+   uploadCar1();
+   uploadCar2();
+    }
+}
+function car1down(){
+    if(car1y<=500){
+        car1y=car1y+10;
+      console.log("when down aarow is presed x= "+car1x+" y= "+car1y);
+      uploadBackground();
+      uploadCar1();
+      uploadCar2();
+    }
+}
+function car1left(){
+    if(car1x>=0){
+        car1x=car1x-10;
+        console.log("when left aarow is presed x= "+car1x+" y= "+car1y);
+      uploadBackground();
+      uploadCar1();
+      uploadCar2();
+    }
+}
+function car1right(){
+    if(car1x<=700){
+        car1x=car1x+10;
+        console.log("when righi aarow is presed x= "+car1x+" y= "+car1y);
+      uploadBackground();
+      uploadCar1();
+      uploadCar2();
+    }
+}
 
 
+
+
+
+function car2up(){
+    if(car2y>=0){
+   car2y=car2y-10;
+   console.log("when up arrow is pressed x = "+car2x+" y= "+car2y);
+   uploadBackground();
+   uploadCar2();
+   uploadCar1();
+    }
+}
+function car2down(){
+    if(car2y<=500){
+        car2y=car2y+10;
+      console.log("when down aarow is presed x= "+car2x+" y= "+car2y);
+      uploadBackground();
+      uploadCar2();
+      uploadCar1();
+    }
+}
+function car2left(){
+    if(car2x>=0){
+        car2x=car2x-10;
+        console.log("when left aarow is presed x= "+car2x+" y= "+car2y);
+      uploadBackground();
+      uploadCar2()
+      uploadCar1();
+    }
+}
+function car2right(){
+    if(car2x<=700){
+        car2x=car2x+10;
+        console.log("when righi aarow is presed x= "+car2x+" y= "+car2y);
+      uploadBackground();
+      uploadCar2();
+      uploadCar1();
+    }
+}
